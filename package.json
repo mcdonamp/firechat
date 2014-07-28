@@ -1,17 +1,17 @@
 {
-  "name": "firechat",
-  "title": "Firechat",
+  "name": "ychat",
+  "title": "YChat",
   "description": "Open source, real-time chat powered by Firebase",
-  "homepage": "http://firebase.github.io/firechat",
+  "homepage": "https://ychat.firebaseapp.com",
   "author": {
     "name": "Firebase Inc.",
     "url": "https://firebase.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/firebase/firechat.git"
+    "url": "git://github.com/mcdonamp/firechat.git"
   },
-  "bugs": "https://github.com/firebase/firechat/issues",
+  "bugs": "https://github.com/mcdonamp/firechat/issues",
   "licenses": [{
     "type": "MIT",
     "url": "http://firebase.mit-license.org/"
@@ -29,5 +29,5 @@
     "grunt-contrib-watch": "~0.1.4",
     "grunt-docco": "~0.2.0"
   },
-  "keywords": ["firebase", "chat", "talk", "real-time", "synchronization", "websocket"]
+  "keywords": ["YC","YCombinator","firebase", "chat", "talk", "real-time", "synchronization", "websocket"]
 }

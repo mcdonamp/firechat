@@ -1,0 +1,311 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>YChat - Firebase powered chat for YC Hacks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Firebase Firechat YC Hacks">
+  <meta name="author" content="Mike McDonald, Engineer @ Firebase, mcdonald@firebase.com">
+  <meta name="description" content="Open source, real-time chat built on Firebase.">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.min.css"> 
+<link rel="stylesheet" href="build/styles.css">
+<link rel="shortcut icon" href="assets/img/favicon.ico">
+</head>
+
+<body class="home-page" data-twttr-rendered="true">
+  <header id="top-content">
+    <div class="header-title">
+      <div id="top-shadow"></div>
+      <div class="container text-center">
+        <!-- <div class="header-links">
+          <a href="#" class="selected">Home</a>
+          <a href="./docs/">Documentation</a>
+          <a href="./docs/annotated-source.html">Annotated Source</a>
+        </div> -->
+        <div id="home-title"><span class="strong">Y</span><span class="">Chat</span></div>
+        <div id="home-subtitle">Open-source real-time chat, built on Firebase</div>
+      </div>
+    </div>
+
+    <div class="header-content">
+      <div class="container text-center">
+        <div class="row">
+          <div class="span12">
+            <a href="https://github.com/mcdonamp/firechat" target="_blank">
+              <button id="home-download-on-github" class="btn btn-large" type="button"><span class="satisfy">Contribute on GitHub</span></button>
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span6 offset3">
+            <div id="firechat-container" class="clearfix"><div id="firechat" class="full">
+              <div id="firechat-header" class="clearfix">
+                <div class="clearfix"><div class="half dropdown" style="">
+                  <a id="firechat-btn-rooms" class="dropdown-toggle btn full" data-toggle="dropdown" href="#">
+                    <span class="icon user-chat"></span>
+                    Chat Rooms
+                    <span class="caret"></span>
+                  </a>
+                  <div class="dropdown-menu full" role="menu"><ul id="firechat-room-list"></ul><div class="dropdown-footer aligncenter">
+                    <button type="button" class="btn twothird center" id="firechat-btn-create-room-prompt">Create Room</button>
+                  </div></div></div>
+                  <div class="half dropdown" style="">
+                    <a data-event="firechat-user-search-btn" class="btn full dropdown-toggle" data-toggle="dropdown" href="#">
+                      <span class="icon user-group"></span>
+                      Visitors
+                      <span class="caret"></span>
+                    </a>
+                    <div class="dropdown-menu" role="menu">
+                      <div class="dropdown-header aligncenter clearfix">
+                        <div class="search-wrapper">
+                          <span class="icon search"></span>
+                          <input type="text" data-event="firechat-user-search" data-template="templates/user-search-list-item.html" data-target="firechat-user-search" data-controls="firechat-user-search-controls" class="center fivesixth">
+                        </div>
+                      </div>
+                      <ul id="firechat-user-search"></ul><div class="dropdown-footer aligncenter clearfix">
+                      <div id="firechat-user-search-controls" class="clearfix">
+                        <span class="quarter"></span>
+                        <button type="button" class="btn half" data-event="firechat-user-search" data-toggle="firechat-pagination-next" data-template="templates/user-search-list-item.html" data-target="firechat-user-search" data-controls="firechat-user-search-controls" disabled="disabled">Next</button>
+                      </div><label class="center full">
+                      <small>Use "+ Invite" button within chat rooms for regular invites.</small>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="firechat-tabs" class="clearfix">
+            <ul id="firechat-tab-list" class="nav nav-tabs clearfix"><li data-room-id="-JSuwxJt4wRN6UMqF39E" class="active" style="width: 325px;">
+              <a href="#-JSuwxJt4wRN6UMqF39E" data-toggle="tab" title="Firechat Demo">Firechat Demo</a>
+            </li></ul>
+            <div id="firechat-tab-content" class="tab-content">
+              <div id="-JSuwxJt4wRN6UMqF39E" data-room-id="-JSuwxJt4wRN6UMqF39E" class="tab-pane active">
+              <div class="tab-pane-menu clearfix">
+                <div class="dropdown twofifth">
+                <a data-event="firechat-user-room-list-btn" class="full btn dropdown-toggle" data-toggle="dropdown" href="#" data-target="firechat-room-user-list--JSuwxJt4wRN6UMqF39E">
+                  <span class="icon user-group"></span>
+                  In Room
+                  <span class="caret"></span>
+                </a>
+                <div class="dropdown-menu" role="menu">
+                  <ul id="firechat-room-user-list--JSuwxJt4wRN6UMqF39E" class="full"></ul>
+                </div>
+              </div><div class="dropdown twofifth">
+              <a data-event="firechat-user-search-btn" class="full btn dropdown-toggle" data-toggle="dropdown" href="#">
+                <span class="icon plus">+</span>
+                Invite
+                <span class="caret"></span>
+              </a><div class="dropdown-menu" role="menu">
+              <div class="dropdown-header aligncenter clearfix">
+                <div class="search-wrapper">
+                  <span class="icon search"></span>
+                  <input type="text" data-event="firechat-user-search" data-template="templates/room-user-search-list-item.html" data-target="firechat-room-user-search--JSuwxJt4wRN6UMqF39E" data-controls="firechat-room-user-search-controls--JSuwxJt4wRN6UMqF39E" class="center fivesixth">
+                </div>
+              </div>
+              <ul id="firechat-room-user-search--JSuwxJt4wRN6UMqF39E"></ul><div class="dropdown-footer aligncenter clearfix">
+              <div id="firechat-room-user-search-controls--JSuwxJt4wRN6UMqF39E" class="clearfix"><span class="quarter"></span>
+<!--
+<button type='button' class='btn third disabled' data-event='firechat-user-search' data-template='templates/room-user-search-list-item.html' data-target='firechat-room-user-search--JSuwxJt4wRN6UMqF39E' data-controls='firechat-room-user-search-controls--JSuwxJt4wRN6UMqF39E' data-toggle='firechat-pagination-prev' disabled=disabled>Prev</button>
+-->
+<button type="button" class="btn half disabled" data-event="firechat-user-search" data-template="templates/room-user-search-list-item.html" data-target="firechat-room-user-search--JSuwxJt4wRN6UMqF39E" data-controls="firechat-room-user-search-controls--JSuwxJt4wRN6UMqF39E" data-toggle="firechat-pagination-next" disabled="disabled">Next</button>
+</div>
+</div>
+</div>
+</div><a href="#!" data-event="firechat-close-tab" class="icon close right" style="15px 5px" title="Leave Room"></a></div>
+<div class="clearfix">
+<div id="firechat-messages-JSuwxJt4wRN6UMqF39E" class="chat">
+</div>
+</div>
+<div class="clearfix">
+<label>Your message:</label>
+<textarea id="textarea-JSuwxJt4wRN6UMqF39E" placeholder="Type your message here..."></textarea>
+</div>
+</div></div>
+</div><div id="firechat-footer" class="clearfix"></div>
+</div></div>
+<div id="user-info" style="display: none;">
+  Logged in as <span id="user-name"></span>.
+  <a href="javascript:logout();">Logout</a>
+</div>
+<div id="user-info-login" style="display: none;">
+  <a href="javascript:$('#auth-modal').modal({ show: true });">Log in</a> to chat!
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</header>
+
+
+<div class="container" id="bottom-container">
+  <div class="row">
+    <div class="span12">
+      <div class="social-container clearfix">
+        <!-- <ul class="social-buttons">
+          <li>
+            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=firebase&amp;repo=firechat&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+          </li>
+          <li>
+            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=firebase&amp;repo=firechat&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
+          </li>
+          <li class="tweet-btn">
+            <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.1404859412.html#_=1406496770634&amp;count=horizontal&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Ffirebase.github.io%2Ffirechat%2F%23!&amp;related=Firechat%3A%20Open-source%20chat%20built%20on%20Firebase&amp;size=m&amp;text=Firechat%20-%20open%20source%20chat%20built%20on%20Firebase&amp;url=http%3A%2F%2Ffirebase.github.io%2Ffirechat&amp;via=firebase" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 107px; height: 20px;"></iframe>
+          </li>
+          <li class="fb-btn">
+            <div class="fb-like fb_iframe_widget" data-href="http://firebase.github.io/firechat" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;href=http%3A%2F%2Ffirebase.github.io%2Ffirechat&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;send=false&amp;show_faces=false&amp;width=200"><span style="vertical-align: bottom; width: 79px; height: 20px;"><iframe name="fc4b1e6c8" width="200px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" src="http://www.facebook.com/plugins/like.php?app_id=&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2FoDB-fAAStWy.js%3Fversion%3D41%23cb%3Df301b7fd04%26domain%3Dfirebase.github.io%26origin%3Dhttp%253A%252F%252Ffirebase.github.io%252Ff2c3e7f1a8%26relation%3Dparent.parent&amp;href=http%3A%2F%2Ffirebase.github.io%2Ffirechat&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;send=false&amp;show_faces=false&amp;width=200" style="border: none; visibility: visible; width: 79px; height: 20px;" class=""></iframe></span></div>
+          </li>
+        </ul> -->
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span12">
+      <div class="bottom-title">Client side real-time chat for YC Hacks.</div>
+      <div class="bottom-content">
+        <div class="row">
+          <div class="span5 offset1">
+            <h3>What is YChat?</h3>
+            <p class="answer">
+              YChat is an open-source, real-time chat widget custom built for YC Hacks using <a href="http://firebase.github.io/firechat/">Firechat</a>. It offers fully secure multi-user, multi-room chat with flexible authentication, moderator features, user presence and search, private messaging, chat invitations, and more. It is hosted using <a href="https://www.firebase.com/hosting.html" target="_blank">Firebase Hosting</a>.
+            </p>
+          </div>
+          <div class="span5">
+            <h3>Which technologies does YChat use?</h3>
+            <p class="answer">
+              The core data layer under YChat uses <a href="https://www.firebase.com">Firebase</a> for real-time data synchronization and persistence.
+              <br><br>
+              The default interface uses <a href="http://jquery.com/" target="_blank">jQuery</a>, <a href="http://underscorejs.org/" target="_blank">Underscore.js</a>, and <a href="http://twitter.github.io/bootstrap/" target="_blank">Bootstrap</a>. Icons by <a href="http://glyphicons.com/" target="_blank">Glyphicons</a>. Build and compilation managed with <a href="http://gruntjs.com/" target="_blank">Grunt</a> and code hosted by <a href="https://www.firebase.com/hosting.html" target="_blank">Firebase Hosting</a>.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span5 offset1">
+            <h3>What can I do with YChat?</h3>
+            <p class="answer">
+              With YChat, you get full-featured chat in your application with a few simple script includes. Additionally, YChat is easy to modify and extend. Based upon it's simple underlying data model and <a href="https://www.firebase.com">Firebase</a>-powered data synchronization, it's easy to add new features, modify the UI, and customize to fit your specific needs.
+            </p>
+          </div>
+          <div class="span5">
+            <h3>Am I welcome to modify YChat?</h3>
+            <p class="answer">
+              Yes! Feel free to fork the code on <a href="https://github.com/mcdonamp/firechat">Github</a>, hack away before or during the event, and submit a pull request for your changes to be merged in. Please remember to be respectful of your fellow hackers.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span5 offset1">
+            
+            <h3>Who's behind YChat?</h3>
+            <p class="answer">
+              YChat was built for YC Hacks by the folks at <a href="https://www.firebase.com">Firebase</a> (YC '11) in San Francisco, California.
+            </p>
+        </div>
+        <div class="span5 ">
+          <h3>How is YChat Licensed?</h3>
+          <p class="answer">
+            YChat is published under the <a href="http://firebase.mit-license.org/" target="_blank">MIT license</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+</div>
+
+
+<footer class="footer">
+  <div class="container text-center">
+    <p>
+    </p><div id="footer-links">
+    <a href="http://firebase.github.io/firechat/">Firechat</a>
+    <a href="https://github.com/mcdonamp/firechat" target="_blank">YChat GitHub Project</a>
+    <!-- <a href="https://github.com/mcdonamp/firechat/issues" target="_blank">Issues</a> -->
+    <a href="mailto:mcdonald@firebase.com?subject=[YC Hacks Chat Question]" target="_blank">Contact</a>
+  </div>
+  <p></p>
+  <!-- <p>
+    <a id="powered-by-firebase" href="https://www.firebase.com/?utm_source=landing&amp;utm_medium=site&amp;utm_campaign=firechat" target="_blank">&nbsp;</a>
+  </p> -->
+</div>
+</footer>
+
+<div id="auth-modal" class="modal hide fade" tabindex="-1" role="dialog">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">×</button>
+    <h4 id="myModalLabel">Authenticate to continue</h4>
+  </div>
+  <div class="modal-body text-center">
+    <p>
+      <a id="twitter-signin" style="text-decoration:none" href="javascript:login('twitter');">
+        <button class="btn btn-block btn-large btn-warning" id="twitter-signin-btn">Sign in with Twitter</button>
+        <!-- <img id="twitter-signin-btn" src="images/sign-in-with-twitter.png"> -->
+      </a>
+    </p>
+    <p>
+      <a id="facebook-signin" style="text-decoration:none" href="javascript:login('facebook');">
+          <button class="btn btn-block btn-large btn-warning" id="facebook-signin-btn">Sign in with Facebook</button>
+        <!-- <img id="facebook-signin-btn" src="images/sign-in-with-facebook.png"> -->
+      </a>
+    </p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal">Cancel</button>
+  </div>
+</div>
+
+<!-- Firechat -->
+<!-- <script id="facebook-jssdk" src="//connect.facebook.net/en_US/all.js#xfbml=1"></script> -->
+<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+<script src="https://cdn.firebase.com/v0/firebase-simple-login.js"></script>
+<script src="https://cdn.firebase.com/v0/firebase-token-generator.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap-modal.min.js"></script>
+
+<!-- Download from https://github.com/firebase/Firechat -->
+<link rel="stylesheet" href="build/firechat-default.min.css">
+<script src="build/firechat-default.min.js"></script>
+<script>
+var chatRef = new Firebase('https://ychat.firebaseio.com'),
+target = document.getElementById("firechat-container"),
+authModal = $('#auth-modal').modal({ show: false }),
+chat = new FirechatUI(chatRef, target);
+
+chat.on('auth-required', function() {
+  authModal.modal('show');
+  return false;
+});
+
+var auth = new FirebaseSimpleLogin(chatRef, function(error, user) {
+  if (user) {
+    var userId = user.id,
+    username = user.displayName;
+
+    chat.setUser(user.id, username);
+    $('#user-name').text(username);
+    $('#user-info').show();
+    $('#user-info-login').hide();
+    setTimeout(function() {
+      // Default login is to the "Lounge"
+      chat._chat.enterRoom('-JSuwxJt4wRN6UMqF39E')
+    }, 500);
+  } else {
+    $('#user-info').hide();
+    $('#user-info-login').show();
+    chat._chat.enterRoom('-JSuwxJt4wRN6UMqF39E')
+  }
+});
+
+function login(provider) {
+  authModal.modal('hide');
+  auth.login(provider);
+}
+
+function logout() {
+  auth.logout();
+  location.reload();
+}
+</script>
+
+</body></html>
