@@ -1,5 +1,5 @@
 {
-  "firebase": "ychat",
+  "firebase": "hack-duke",
   "public": ".",
   "rules": "rules.json",
   "ignore": [
