@@ -1,7 +1,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>YChat - Firebase powered chat for YC Hacks</title>
+  <title>KittyChat - Firebase powered chat for Hack Duke</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Firebase Firechat YC Hacks">
   <meta name="author" content="Mike McDonald, Engineer @ Firebase, mcdonald@firebase.com">
@@ -18,25 +18,20 @@
     <div class="header-title">
       <!-- <div id="top-shadow"></div> -->
       <div class="container text-center">
-        <!-- <div class="header-links">
-          <a href="#" class="selected">Home</a>
-          <a href="./docs/">Documentation</a>
-          <a href="./docs/annotated-source.html">Annotated Source</a>
-        </div> -->
-        <div id="home-title"><span class="strong">Y</span><span class="">Chat</span></div>
-        <div id="home-subtitle">Real-time chat for YC Hacks, built on Firebase</div>
+        <div id="home-title"><span class="strong">Kitty</span><span class="">Chat</span></div>
+        <div id="home-subtitle">Real-time chat for Hack Duke, built on Firebase</div>
       </div>
     </div>
 
     <div class="header-content">
       <div class="container text-center">
-        <!-- <div class="row">
+        <div class="row">
           <div class="span12">
-            <a href="https://github.com/mcdonamp/firechat" target="_blank">
-              <button id="home-download-on-github" class="btn btn-large" type="button"><span class="satisfy">Contribute on GitHub</span></button>
+            <a href="http://www.hackduke.com/" target="_blank">
+              <img style="height:auto; width:auto; max-width:300px; max-height:300px;" src="./assets/img/hackduke-logo.svg">
             </a>
           </div>
-        </div> -->
+        </div>
         <div class="row">
           <div class="span12">
             <div id="firechat-container" class="clearfix"><div id="firechat" class="full">
@@ -139,9 +134,9 @@
 <div class="container text-center">
   <p>
   </p><div id="footer-links">
-  <a href="http://ychacks.challengepost.com/">ChallengePost</a>
-  <a href="https://github.com/mcdonamp/firechat" target="_blank">GitHub Project</a>
-  <a href="mailto:mcdonald@firebase.com?subject=[YC Hacks Chat Question]" target="_blank">Contact</a>
+  <a href="http://hackdukefall2014.challengepost.com/">ChallengePost</a>
+  <a href="https://github.com/mcdonamp/firechat/hackduke-branch" target="_blank">GitHub Project</a>
+  <a href="mailto:mcdonald@firebase.com?subject=[Hack Duke Chat Question]" target="_blank">Contact Us!</a>
   </div>
 <p></p>
 </div>
@@ -184,7 +179,7 @@
 <link rel="stylesheet" href="build/firechat-default.min.css">
 <script src="build/firechat-default.min.js"></script>
 <script>
-var chatRef = new Firebase('https://ychat.firebaseio.com'),
+var chatRef = new Firebase('https://hack-duke.firebaseio.com/'),
 target = document.getElementById("firechat-container"),
 authModal = $('#auth-modal').modal({ show: false }),
 chat = new FirechatUI(chatRef, target);
